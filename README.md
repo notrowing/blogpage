@@ -4,6 +4,7 @@
 
 간단한 게시판 만들기 
 
+<hr>
 📌프로그래밍 언어
 
 <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=openjdk&logoColor=white">
