@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@600&display=swap');
+body{
+    background-color: #efefef;
+}
+
+header{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 80px;
+    width:1300px;
+    align-items: center;
+    margin-top: 30px;
+  
+}
+
+.title_img{
+    width: 50px;
+    height: 50px;   
+}
+
+.input_box1{
+    display: flex;
+    flex-direction: column;
+    width:1300px;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 60px;
+}
+
+.input_box2{
+    margin:20px auto;
+    width:1300px;
+    border-radius: 10px;
+    background-color: white;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.note_mid{
+    padding: 10px 10px 0;
+    display: flex;
+    width: 90%;
+    justify-content: flex-end;
+}
+
+.note_mid>a{
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+#update_btn, #delete_btn{
+    width: 50px;
+    height: 25px;
+    background-color: black;
+    color: white;
+    border: solid 2px black;
+    border-radius: 5px;
+
+}
+
+#update_btn:hover, #delete_btn:hover{
+    background-color: gray;
+    border: solid 2px gray;
+    border-radius: 5px;
+}
+
+#board_title{
+    width: 1000px;
+    height: 50px;
+    font-size: 30px;
+    margin: 20px;
+    margin: 20px 0;
+    border-bottom: solid 3px gray;
+}
+
+#board_content{
+    width: 1000px;
+    height: 350px;
+    font-size: 25px;
+    border: solid 3px gray;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#input_footer{
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#board_writer{
+    width:200px ;
+    height: 35px;
+    border-bottom: solid 3px gray;
+    text-align: center;
+    
+}
+
+#input_btn{
+    background-color:  black;
+    border-radius: 5px;
+    width: 120px;
+    height: 40px;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
+#input_btn:hover{
+    border-radius: 5px;
+    background-color: gray;
+}
+
+
+#input_box{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    border-top: solid 3px lightgray;
+    margin-bottom: 50px;
+}
+#cmt_input_box{
+    display: flex;
+    align-items: center;
+    background-color: white;
+  
+}
+
+#cmt_text{
+    width: 750px;
+    height: 40px;
+    resize: none;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+#cmt_btn{
+    background-color:  black;
+    border-radius: 5px;
+    color: white;
+    width: 100px;
+    height: 35px;
+    border: none;
+    font-size: 20px;
+}
+
+#cmt_btn:hover{
+    border-radius: 5px;
+    background-color: gray;
+
+}
+
+#cmt_box2{
+    margin-left: 100px;
+    display: flex;
+    padding: 20px;
+    
+    
+}
+#cmtlist_box{
+    display: flex;
+    flex-direction: column;
+    width: 1050px;
+}
+#cmt_text2{
+    width: 750px;
+    font-size: 20px;
+}
+#cmt_writer{
+    font-weight: bold;
+}
+
+#deleteCmt_btn{
+    background-color:  black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+#deleteCmt_btn:hover{
+    background-color: gray;
+    border-radius: 5px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #efefef;
+}
+#footer_box{
+    width: 100%;
+}
+
+#info_box>span{
+    color: lightslategray;
+}

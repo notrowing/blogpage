@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Kanit&family=Noto+Sans+KR:wght@600&display=swap');
+
+#join_box{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    width: 300px;
+    height: 400px;
+    margin-bottom: 10px;
+    margin: 10px auto;
+    align-items: center;
+
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px 0px 40px;
+    border: solid 1px lightgray;
+}
+
+#insta_logo_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height:100px;
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+}
+
+form {
+    width: 500px;
+}
+#userid, #userpw, #username, #email{
+    display: block;
+    border-radius: 5px;
+    background-color: #fafafa;
+    border: solid 1px lightgray;
+    font-size: 15px;
+    width: 300px;
+    height: 40px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+#userid:focus, #userpw:focus, #username:focus, #email:focus{
+   outline: none;
+}
+
+#join_btn{
+    background-color: #222222;
+    border: solid 1px #222222;
+    border-radius: 5px;
+    width: 300px;
+    height: 40px;
+    color: #FAFEEF;
+    font-size: 15px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: block;
+}
+
+#join_btn:hover{
+    border-radius: 5px;
+    background-color: gray;
+    border: solid 1px gray;
+}
+
+#info_box{
+    color: lightslategray;
+    font-size: 8px;
+}

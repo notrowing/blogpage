@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Kanit&family=Noto+Sans+KR:wght@600&display=swap');
+
+#head_title{
+    font-family: 'Anton', sans-serif;
+    font-size: 50px;
+}
+#container_main{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-bottom: 10px;
+    margin: 10px auto;
+}
+
+.container{
+
+    padding-top: 40px;
+    padding-bottom: 20px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.con_header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.con_header>h2{
+   color: blue;
+}
+
+.btn_box{
+    display: flex;
+    flex-direction: row;
+}
+
+#login_btn, #join_btn{
+    background-color: black;
+    border: solid 2px black;
+    color: white;
+    border-radius: 5px;
+    margin-right: 20px;
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+} 
+
+#login_btn:hover, #join_btn:hover{
+    background-color: gray;
+    border: solid 2px  gray;
+    border-radius: 5px;
+} 
+
+header{
+    margin: 80px 0px 40px;
+}
+
+#logo_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100px;
+}
+
+.logo_img{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 108px;
+}
+
+.footer_img{
+    width: 500px;
+    margin-top: 20px;
+}
+
+#info_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+#info_box>span{
+    font-size: 13px;    
+    color: lightslategray;
+}
+
+footer>video{
+    width: 100%;
+    margin-top: 20px;
+}

@@ -1,0 +1,141 @@
+.notice{
+    margin-top: 10px;
+    border-radius: 5px;
+    
+    align-items: center;
+}
+
+.table_box{
+    border: solid black 2px;
+}
+
+#note_btn_box{
+    display: flex;
+    margin: 10px auto;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+#note_btn_box>a{
+    padding: 0px 10px;
+}
+
+#note_btn{
+    background-color: black;
+    color: #faFeEf;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    border: none;
+    font-size: 15px;
+}
+
+#note_btn:hover{
+    border-radius: 10px;
+    background-color: gray;
+}
+
+.note_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: solid 3px lightgray;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: auto;
+    width: 100%;
+    height: 800px;
+}
+
+/* 그리드 스크롤바 스타일 */
+.note_grid::-webkit-scrollbar{
+    width: 10px;
+}
+
+.note_grid::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 10px;
+}
+
+.note_grid::-webkit-scrollbar-track{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px lightgray;
+}
+
+.note_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.notice_box{
+    width: 350px;
+    height: 200px;
+    margin: 10px;
+    border: dotted 4px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: white;
+}
+
+
+.note_mid{
+    padding: 10px 10px 0;
+}
+.note_mid>a{
+    text-decoration: none;
+}
+
+ #cmt_box{
+    background-color: black;
+    color: #faFeEf;
+    border-radius: 5px;
+    height: 30px;
+    width: 80px;
+    font-size: 15px;
+}
+
+#update_btn, #delete_btn{
+    background-color: black;
+    color: #faFeEf;
+    border-radius: 5px;
+    height: 25px;
+    width: 60px;
+    font-size: 15px;
+}
+
+#update_btn:hover, #delete_btn:hover, #cmt_box:hover{
+    background-color: gray;
+    border: solid 2px gray;
+    border-radius: 5px;
+}
+
+.note_title{
+    font-weight: bold;
+    padding: 10px 10px 0px 10px;
+    font-size: 20px;
+}
+
+.note_content{
+    height: 70%;
+    padding: 10px 10px 0px 10px;
+    font-size: 15px;
+}
+.note_writer{
+    font-size: 12px;
+}
+
+.note_footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 10px 10px 10px;
+}
+
+#info_box>span{
+    color: lightslategray;
+}
+
+

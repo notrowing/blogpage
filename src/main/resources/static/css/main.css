@@ -1,0 +1,149 @@
+@import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Kanit&family=Noto+Sans+KR:wght@600&display=swap');
+
+.body{
+    background-color: #e9e9e9;
+}
+body::-webkit-scrollbar{
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px gray;
+}
+.container_main{
+    margin: 0px auto;
+    display: flex;
+}
+
+.container{
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container_content{
+    padding: 10px 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+    /* border-top: 4px solid #518E2E; */
+    margin: 20px auto;
+}
+
+#container_top{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#container_top>h1{
+    font-size: 20px;
+    font-family: 'Kanit', sans-serif;
+   
+}
+
+#container_top>p{
+    font-size: 15px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#head{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin: 40px 0px;
+}
+#head_title{
+    font-size: 100px;
+    font-family: 'Anton', sans-serif;
+    color: #222222;
+}
+#head_mid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#head_mid>a{
+    font-size: 25px;
+    font-family: 'Dongle', sans-serif;
+}
+#head_mid>form{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+}
+
+.top_img{
+    width: 400px;
+    height: 150px;
+}
+
+#top_menu{
+    display: flex;
+    flex-direction: row;
+    background-color:black;
+    height: 70px;
+    align-items: center;
+    padding-left: 20dvw;
+    font-family: 'Nanum Pen Script', cursive;
+   
+}
+.menu_item{
+    list-style: none;
+    margin-right: 40px;
+}
+
+.menu_item>a{
+    color: white;
+    width: 60px;
+    font-size: 25px;
+}
+.menu_item:hover{
+    border-bottom: solid 3px white;
+}
+
+.menu_item>a:link, .menu_item>a:visited{
+    text-decoration: none;
+}
+.search{
+    border: solid 2px black;
+}
+.search_input{
+    width: 250px;
+    height: 50px;
+    border:none;
+}
+
+
+.search_btn{
+    height: 50px;
+    border: none;
+    background-color: none;
+    border-radius: 0 10px 10px 0;
+}
+
+.search_icon{
+    width: 25px;
+    height: 25px;
+    color:black;
+}
+
+.search_input:focus, .search_btn:focus{
+    outline: none;
+}
+
+
+

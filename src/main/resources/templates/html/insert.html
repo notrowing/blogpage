@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insert</title>
+    <link rel="stylesheet" href="/css/insert.css">
+</head>
+<body>
+    <div class="input_box1">
+        <header>
+            <img class="title_img" src="https://soopool.art/img/infoacnh/Neighbor/rco.png">
+            <h1>write a post</h1>
+            <img class="title_img" src="https://soopool.art/img/infoacnh/Neighbor/rcm.png">
+        </header>
+
+        <article class="input_box2">
+            <form action = "/board/insert" method="post">
+                <input type="text" name="title" placeholder="제목을 입력하세요" id="title">
+                <textarea name="content" placeholder="내용을 입력하세요"></textarea>
+                <div>
+                    <span id="text_box">
+                        작성자 : <input type = "text" name="memberName"
+                        th:value =  "${session.member.memberName}" id="input_txt" readonly>
+                        <input type = "hidden" name= "memberId"
+                        th:value =  "${session.member.memberId}" id="input_txt" readonly/>
+                    </span>
+                    <button type = "submit" id="input_btn">완료</button>
+                </div>
+            </form>
+        </article>
+
+        <footer>
+            <div id="info_box">
+                <span>© 2023 NOTICE BOARD FROM JEONGACHO</span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>join</title>
+    <link rel="stylesheet" href="/css/join.css">
+    
+</head>
+<body>
+    <div id="join_box">
+        <article >
+            <div id = "insta_logo_box">
+                Record of the day
+            </div>
+      
+       
+            <form action="/board/join" method="post">
+                <input type="text" id="userid" name="memberId" placeholder="아이디">
+                <input type="password" id="userpw" name="memberPw" placeholder="비밀번호" th:value="${session.member.memberPw}">
+                <input type="text" id="username" name="memberName" placeholder="이름" th:value="${session.member.memberName}">
+                <input type="text" id="email" name="memberEmail" placeholder="이메일" th:value="${session.member.memberEmail}">
+                <button type="submit" id="join_btn">회원가입</button>
+            </form>
+        </article>
+    
+        <footer>
+            <div id="info_box">
+                <span>© 2023 NOTICE BOARD FROM JEONGACHO</span>
+            </div>
+        </footer>
+    </div>
+ 
+
+</body>
+</html>

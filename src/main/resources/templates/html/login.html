@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login Page</title>
+    <link rel="stylesheet" href="/css/login.css">
+  
+</head>
+<body>
+    <article>
+        <div id="container_main">
+            <div class = "container">
+                <div id = "insta_logo_box">
+                    Record of the day
+                </div>
+                
+                <form name ="login" action="/board/login" method="post">
+                    <input name="memberId" class="id_InputBox" type="text" placeholder="&nbsp;전화번호, 사용자 이름 또는 이메일">
+                    <input name="memberPw" class="pw_InputBox" type="password" placeholder="&nbsp;비밀번호">
+                    <button type="submit" class="login_button">로그인</button>
+
+                    <div class="or_text"> 또는 </div>
+            
+                    <div class="find_PW">
+                        <a href="#">Facebook으로 로그인</a>
+                        <a href="#">비밀번호를 잊으셨나요?</a>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="new_Account">
+            <p>계정이 없으신가요?<span><a href="/board/join">&nbsp;가입하기</a></span></p>
+            </div>
+
+            <div id = "new_down">
+                <span> 앱을 다운로드 하세요</span>
+            </div>
+        </div> 
+    </article>
+
+
+</body>
+</html>

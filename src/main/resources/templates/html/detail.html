@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insert</title>
+    <link rel="stylesheet" href="/css/detail.css">
+</head>
+<body>
+    <div class="input_box1">
+        <header>
+            <img class="title_img" src="https://soopool.art/img/infoacnh/Neighbor/rco.png">
+            <h1>Record of the day</h1>
+            <img class="title_img" src="https://soopool.art/img/infoacnh/Neighbor/rcm.png">
+        </header>
+       
+
+        <article class="input_box2">
+            <div class="note_mid">
+                <a th:if="${session.member}!= null and ${session.member.memberId==board.memberId}"  th:href = "@{/board/update?(seq=${board.seq})}"> 
+                    <button type="submit" id="update_btn" >수정</button>
+                 </a>
+                
+                <a th:if="${session.member}!= null and ${session.member.memberId==board.memberId}" th:href = "@{/board/delete?(seq=${board.seq})}"> 
+                    <button type="submit" id="delete_btn" onclick="alert('게시글을 정말 삭제할까요?')">삭제</button>
+                </a>
+            </div>
+              
+            <div id="board_title" th:text="${board.title}"></div>
+            <div id= "board_content" th:text="${board.content}"></div>
+            
+            <div id="input_footer">
+                <div id = "board_writer" th:text="${board.memberName}" ></div>
+                <a href="/">
+                    <button type="submit" id="input_btn">목록보기</button>
+                </a>
+            </div>
+        </article>
+
+        <article class="cmt_box3">
+
+            <!-- 댓글 보여주기 -->
+            <div th:each="i:${cmtList}" id = "cmt_box2" th:if="${session.member!=null}">
+                <div id = cmtlist_box>
+                    <p>작성자 :<a th:text = "${i.memberId}" id="cmt_writer"></a>
+                    </p>
+                    <a th:text="${i.answer}" id = "cmt_text2"></a>
+                </div>
+                
+                <!-- 댓글 삭제 -->
+                <a th:if="${session.member.memberId == i.memberId}" 
+                     th:href = "@{/board/cmtdelete?(answerSeq=${i.answerSeq},seq=${i.seq})}">
+                    <button type="submit" id="deleteCmt_btn" onclick="alert('댓글을 삭제할까요?')">삭제</button>
+                </a>
+              
+           </a>
+            </div>
+
+            <!-- 댓글달기 -->
+            <div th:if="${session.member}!= null " id="input_box">
+                <form action = "/board/cmtbox" method="post" id="cmt_input_box">
+                    <input type="hidden" name="seq" th:value = "${board.seq}">
+                    <textarea name="answer" placeholder="여러분의 소중한 댓글을 입력해 주세요." id="cmt_text"></textarea>
+                    <input type="hidden" name="memberId" th:value = "${session.member.memberId}">
+                    <button type="submit" id="cmt_btn">보내기</button>
+                </form>
+            <div>
+            
+        </article>
+
+        <footer>
+            <div id="info_box">
+                <span>© 2023 NOTICE BOARD FROM JEONGACHO</span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

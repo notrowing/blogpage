@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insert</title>
+    <link rel="stylesheet" href="/css/insert.css">
+</head>
+<body>
+    <div class="input_box1">
+        <header>
+            <img class="title_img" src="https://soopool.art/img/infoacnh/Neighbor/rco.png">
+            <h1>포토 앨범 작성</h1>
+            <img class="title_img" src="https://soopool.art/img/infoacnh/Neighbor/rcm.png">
+        </header>
+
+        <article class="input_box2">
+            <form method="post" enctype="multipart/form-data" action="/photo/upload">
+ 
+                <div>
+                    <span id="text_box">
+                        <input type="hidden" name="memberId" th:value="${session.member.memberId}">
+                        <input type="file" name="file"><br>
+                    </span>
+                    <button type = "submit" id="input_btn">업로드</button>
+                </div>
+            </form>
+        </article>
+
+        <footer>
+            <div id="info_box">
+                <span>© 2023 ANIMAL CROSSING FROM JEONGACHO</span>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

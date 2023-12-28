@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Main</title>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/notice.css">
+
+   
+</head>
+
+<body>
+    <header>
+        <div id="head">
+            <div id = "head_title">
+                Record of the day
+            </div>
+        </div>
+        <div id="top_menu">
+           
+            <li class ="menu_item">
+                <a href="/">
+                    <div>Board</div>
+                </a>
+            </li>
+            <li class ="menu_item">
+                <a href="/photolist">
+                    <div>Photo album</div>
+                </a>
+            </li>
+            <li class ="menu_item" th:if="${session.member}==null">
+                <a href="/board/loginpage">
+                    <div>Log in</div>
+                </a>
+            </li>
+            <li class ="menu_item" th:if="${session.member}==null">
+                <a href="/board/join">
+                    <div>Sign Up</div>
+                </a>
+            </li>
+            <li class ="menu_item" th:if="${session.member}!=null">
+                <a href="/board/logout">
+                    <div>Log out</div>
+                </a>
+            </li>
+        </div>
+    </header>
+
+    <div class = "container_main">
+
+        <div class="container">
+            <article id = "container_content">
+               <div id="container_top">
+                <h1>Board</h1>
+                <p> 게시판은 주민의 글과 의견을 자유롭게 제시할 수 있는 게시판 입니다.</p>
+                <p>상업성광고, 정치적 목적 게시물, 특정단체나 개인의 명예훼손 게시물, 음란물 등 <br>
+                    미풍양속에 어긋나는 게시물 게시자는 민형사상 불이익을 받을 수 있으며 관리자의 권한으로 삭제 될 수 있으니 
+                    <br>게시판 성격에 맞는 내용만 게시하시기 바랍니다</p>
+               </div>
+
+                <section class="notice">
+                    <div id = "note_btn_box">
+                        <a th:if="${session.member}!= null" href = "/board/input">
+                            <button type = "submit" id="note_btn">글 쓰기</button>
+                        </a>
+                    </div>
+
+                    <div class="note_grid" >
+                        <div class="notice_box" th:each="i:${noteList}">
+                            <div class="note_box">
+                                <div class="note_title" th:text="${i.title}"></div>
+                                <div class="note_mid">
+                                    <a th:if="${session.member}!= null and ${session.member.memberId==i.memberId}"  th:href = "@{/board/update?(seq=${i.seq})}"> 
+                                        <button type="submit" id="update_btn" > 수정</button>
+                                     </a>
+                                    
+                                    <a th:if="${session.member}!= null and ${session.member.memberId==i.memberId}" th:href = "@{/board/delete?(seq=${i.seq})}"> 
+                                        <button type="submit" id="delete_btn" onclick="alert('게시글을 정말 삭제할까요?')"> 삭제</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="note_content"th:text="${i.content}"></div>
+                            <div class="note_footer">
+                                <div class="note_writer" th:text="${i.memberName}"></div>
+                                <a th:href = "@{board/detail?(seq=${i.seq})}">
+                                    <button type="submit" id="cmt_box">상세보기</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+            </article>
+            <footer>
+                <div id="info_box">
+                    <span>© 2023 NOTICE BOARD FROM JEONGACHOO</span>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</body>
+</html>
