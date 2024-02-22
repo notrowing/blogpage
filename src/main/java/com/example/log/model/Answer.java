@@ -13,7 +13,6 @@ public class Answer{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long answerSeq;
-    
     private long seq;
     private String answer;
     private String memberId;

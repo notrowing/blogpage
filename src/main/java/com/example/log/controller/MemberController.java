@@ -30,7 +30,7 @@ public class MemberController {
          member = memberRepository.findByMemberIdAndMemberPw(memberId, memberPw);
          int count = memberRepository.findByMemberPwAndMemberId(memberPw,memberId).size();
          if(count<1){
-            return "html/loginfail";
+            return "/html/loginfail";
         }
  
         session.setAttribute("member", member);
@@ -38,23 +38,23 @@ public class MemberController {
      }
  
      //로그아웃 
-     @GetMapping("board/logout")
+     @GetMapping("/board/logout")
      public String logout(HttpSession session){
          session.invalidate();
          return "redirect:/";
      }
  
      // 회원 가입 페이지
-     @GetMapping("board/join")
+     @GetMapping("/board/join")
      public String joinBtn(HttpSession session){
          Member member = new Member();
          member.setMemberId("admin");
          session.setAttribute("member", member);
-         return "html/join";
+         return "/html/join";
      }
  
      //회원가입
-     @PostMapping("board/join")
+     @PostMapping("/board/join")
      public String memberPost(   @RequestParam("memberId") String memberId,
                                  @RequestParam("memberPw") String memberPw,
                                  @RequestParam("memberName") String memberName,

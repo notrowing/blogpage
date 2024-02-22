@@ -44,7 +44,7 @@ public class HomeController {
 
     // 글 작성 
     @PostMapping("board/insert")
-    public String BoardNote(Board board, 
+    public String BoardNote(Board board,
                             @RequestParam("memberId") String memberId,
                             @RequestParam("memberName") String memberName){
         boardRepository.save(board);
@@ -52,7 +52,7 @@ public class HomeController {
     }
  
     //글 삭제 버튼
-    @GetMapping("board/delete")
+    @GetMapping("/board/delete")
     public String boardDelete(long seq){
         boardRepository.deleteById(seq);
         return "redirect:/";
@@ -62,14 +62,14 @@ public class HomeController {
     Boardservice boardservice;
 
     //글 수정 버튼
-    @GetMapping("board/update")
+    @GetMapping("/board/update")
     public String updateBtn(long seq, Model model){
         model.addAttribute("board", boardservice.boardView(seq));
-        return "html/update";
+        return "/html/update";
     }
 
     //글 수정
-    @PostMapping("board/modify")
+    @PostMapping("/board/modify")
     public String boardUpdate(long seq, Board board){
         Board boardTemp = boardservice.boardView(seq);
         boardTemp.setSeq(board.getSeq());
@@ -85,7 +85,7 @@ public class HomeController {
     AnswerRepository answerRepository;
 
     // 상세보기
-    @GetMapping("board/detail")
+    @GetMapping("/board/detail")
     public String detailBtn(long seq,Board board, Model model,
                              HttpSession httpsession){
         model.addAttribute("board", boardservice.boardView(seq));
@@ -93,11 +93,11 @@ public class HomeController {
         // 댓글
         List<Answer> data = answerRepository.findBySeq(seq);
         model.addAttribute("cmtList",data);
-        return "html/detail";
+        return "/html/detail";
     }
 
     // 댓글 입력 
-    @PostMapping("board/cmtbox")
+    @PostMapping("/board/cmtbox")
     public String cmtInput(String answer, long seq ,String memberId, 
                             Board board, HttpSession httpsession, Model model){
         Answer comment = new Answer();
